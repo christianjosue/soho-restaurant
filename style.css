@@ -1,0 +1,2785 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat:wght@100;200;300;400&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Waterfall&family=WindSong&display=swap');
+
+@font-face {
+    font-family: BabaPro;
+    src: url('./logo-font/BabaPro.ttf');
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Red Hat Display';
+    overflow-x: hidden;
+}
+
+/*-------------------------------------------------------------------------- HOME */
+
+/*------------------------------------------------------------ HERO SECTION --*/
+.hero {
+    height: 100%;
+    background-image: url(img/home/hero/hero-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo {
+    font-family: BabaPro;
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    margin-left: 15px;
+}
+
+.logo span {
+    color: #de9714;
+}
+
+.navbar {
+    position: relative;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: calc(100vh - 80px);
+    list-style-type: none;
+    text-align: center;
+    background: rgba(0, 0, 0, .9);
+    transition: all .5s ease-in-out;
+    z-index: 9999;
+}
+
+.open {
+    width: 50vw;
+}
+
+.navbar ul li {
+    margin: 50px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    display: none;
+}
+
+/*------------------------------- MENU BUTTON MOBILE */
+
+.menu-btn {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars {
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before,
+.menu-btn-bars::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-bars::before {
+    transform: translateY(-14px);
+}
+
+.menu-btn-bars::after {
+    transform: translateY(14px);
+}
+
+.cross .menu-btn-bars {
+    background: transparent;
+    transform: translateX(-50px);
+}
+
+.cross .menu-btn-bars::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.cross .menu-btn-bars::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/*------------------------------- HERO ITEMS */
+
+.hero-items {
+    color: white;
+    position: absolute;
+    text-align: right;
+    margin-top: 20px;
+    right: 15px;
+}
+
+.hero-items h4 {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.hero-items h6 {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.hero-items .order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(222, 151, 20, .5);
+    text-shadow: 1px 1px 8px black;
+    font-weight: 100;
+    font-size: 12px;
+    margin-left: auto;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background-color: #de9714;
+}
+
+/*------------------------------------------------------------ WELCOME --*/
+.welcome {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.welcome-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.welcome-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.welcome-title .logo {
+    height: 52px;
+    font-size: 36px;
+    color: black;
+    margin: 0;
+}
+
+.welcome-title h4 {
+    font-size: 28px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.welcome-title p {
+    font-family: Montserrat, sans-serif;
+    font-weight: 200;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.welcome-intro {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.welcome-content {
+    height: auto;
+}
+
+.welcome-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-img {
+    width: 90%;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.welcome1 {
+    background-image: url(img/home/welcome/restaurant-1.jpg);
+}
+
+.welcome2 {
+    background-image: url(img/home/welcome/restaurant-2.jpg);
+}
+
+.welcome-text {
+    width: 90%;
+    font-size: 15px;
+    color: #474747;
+    text-align: justify;
+    margin: 25px 0;
+}
+
+.welcome-text p {
+    margin: 0;
+}
+
+.text-full-width {
+    display: none;
+}
+
+/*------------------------------------------------------------ OUR RESTAURANT --*/
+.our-restaurant {
+    width: 100%;
+    height: auto;
+}
+
+.our-restaurant-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.our-restaurant-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.our-restaurant-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.our-restaurant-intro {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.our-restaurant-content {
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.restaurant-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 95%;
+    height: 240px;
+    margin: auto;
+    margin-bottom: 7px;
+}
+
+.restaurant1 {
+    background-image: url(img/home/our-restaurant/table.jpg);
+}
+
+.restaurant2 {
+    background-image: url(img/home/our-restaurant/food.jpg);
+}
+
+.restaurant3 {
+    background-image: url(img/home/our-restaurant/lights.jpg);
+}
+
+.restaurant4 {
+    background-image: url(img/home/our-restaurant/alcohol.jpg);
+}
+
+/*------------------------------------------------------------ KNOW OUR MENU --*/
+.know-menu {
+    background-image: url(img/home/know-menu/wine.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* background-attachment: fixed; */
+
+    height: 300px;
+    width: 100%;
+}
+
+.know-content {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+}
+
+.know-menu-text {
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.view-now-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid rgb(124, 124, 124);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.view-now-btn:hover {
+    background-color: white;
+    color: black;
+    font-weight: 400;
+}
+
+/*------------------------------------------------------------ OWNER --*/
+.owner {
+    width: 100%;
+    height: auto;
+}
+
+.owner-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+}
+
+.owner-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.owner-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.owner-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.owner-img {
+    box-sizing: border-box;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 250px;
+    background-image: url(img/home/owner/owner-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.owner-container .signature {
+    font-family: WindSong, sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.owner-content p {
+    text-align: justify;
+    color: #474747;
+    font-size: 15px;
+}
+
+.text-fullwidth {
+    display: none;
+}
+
+/*------------------------------------------------------------ FOOTER --*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: #fff;
+}
+
+.footer-container {
+    width: 100%;
+    margin: auto;
+}
+
+.footer-container .logo {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.footer-container .about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font-weight: 200;
+}
+
+.footer-title {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.learn {
+    display: none;
+}
+
+.about-us p {
+    padding-left: 15px;
+}
+
+.contact-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+.email-icon {
+    background-image: url(img/home/footer/mail.svg);
+    height: 15px;
+}
+
+.phone-icon {
+    background-image: url(img/home/footer/phone.svg);
+}
+
+.location-icon {
+    background-image: url(img/home/footer/location.svg);
+}
+
+.rrss {
+    display: flex;
+    color: white;
+    align-items: center;
+    align-content: center;
+    margin: 15px 0;
+}
+
+.rrss-item {
+    height: 20px;
+    width: 20px;
+    margin-right: 27px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.twitter-icon {
+    background-image: url(img/home/footer/twitter.svg);
+    width: 25px;
+}
+
+.linkedin-icon {
+    background-image: url(img/home/footer/linkedin.svg);
+}
+
+.instagram-icon {
+    background-image: url(img/home/footer/instagram.svg);
+}
+
+.facebook-icon {
+    background-image: url(img/home/footer/facebook.svg);
+}
+
+.instagram {
+    text-align: center;
+}
+
+.instagram-images {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.instagram-img {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+
+.instagram1 {
+    background-image: url(img/home/footer/insta-1.jpg);
+}
+
+.instagram2 {
+    background-image: url(img/home/footer/insta-2.jpg);
+}
+
+.instagram3 {
+    background-image: url(img/home/footer/insta-3.jpg);
+}
+
+.instagram4 {
+    background-image: url(img/home/footer/insta-4.jpg);
+}
+
+.instagram5 {
+    background-image: url(img/home/footer/insta-5.jpg);
+}
+
+.instagram6 {
+    background-image: url(img/home/footer/insta-6.jpg);
+}
+
+.copy {
+    margin-top: 50px;
+    font-size: 10px;
+    font-weight: 200;
+    padding-bottom: 5px;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.copy-items {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.copy-item {
+    padding: 0 15px;
+}
+
+.copy-item:nth-child(1),
+.copy-item:nth-child(2) {
+    border-right: 1px solid rgba(255, 255, 255, .5);
+}
+
+/*-------------------------------------------------------------------------- TEAM */
+
+/*------------------------------------------------------------ TEAM HERO --*/
+.team-hero {
+    height: 500px;
+    width: 100%;
+    background-image: url(img/team/hero/team-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.team-items {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.opacity {
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.team-items .order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(222, 151, 20, .5);
+    font-weight: 100;
+    font-size: 12px;
+    margin: auto;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.team-items h4 {
+    font-size: 28px;
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.team-items h6 {
+    font-size: 17px;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+/*------------------------------------------------------------ MATTER OF COOKING --*/
+.matter-cooking {
+    width: 100%;
+}
+
+.cooking-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.cooking-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.cooking-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.cooking-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cooking-content {
+    width: 100%;
+}
+
+.cooking-text {
+    color: #474747;
+    font-size: 16px;
+    text-align: justify;
+    display: none;
+}
+
+.cooking-content p {
+    font-size: 15px;
+    color: #474747;
+    text-align: justify;
+}
+
+.cooking-img {
+    width: 100%;
+    height: 220px;
+    margin: 20px 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50%;
+    box-sizing: border-box;
+}
+
+.cooking-food {
+    background-image: url(img/team/cooking/cooking-food.jpg);
+}
+
+.cooking-team {
+    background-image: url(img/team/cooking/kitchen-team.jpg);
+}
+
+/*------------------------------------------------------------ EVERY DETAIL COUNTS --*/
+.every-detail {
+    background-image: url(img/team/every-detail/evey-detail.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% 50%;
+
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.detail-text {
+    position: absolute;
+    bottom: 55px;
+    left: 45px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.detail-text span {
+    color: #de9714;
+}
+
+/*------------------------------------------------------------ MEET THE CHEF --*/
+.chef {
+    height: auto;
+    width: 100%;
+}
+
+.chef-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.chef-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.chef-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.chef-content {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.chef-information {
+    text-align: justify;
+    color: #474747;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.chef-img {
+    background-image: url(img/team/chef/chef.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 100%;
+}
+
+.chef-signature {
+    font-family: Waterfall, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0;
+    color: black;
+}
+
+.chef-information .chef-signature {
+    display: none;
+}
+
+/*------------------------------------------------------------ ALL STAFF --*/
+.staff {
+    width: 100%;
+    height: auto;
+}
+
+.staff-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.staff-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.staff-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.staff-intro {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.staff-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.staff-item {
+    box-sizing: border-box;
+    height: 350px;
+    width: 320px;
+    margin-bottom: 50px;
+}
+
+.upside-part {
+    height: 30%;
+    background-color: black;
+}
+
+.middle-part {
+    box-sizing: border-box;
+    position: relative;
+    height: 55%;
+    border-left: 1px solid #474747;
+    border-right: 1px solid #474747;
+}
+
+.down-part {
+    height: 15%;
+    background-color: #b5b5b5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff-img {
+    position: absolute;
+    top: -65px;
+    left: 95px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.staff-description {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.staff-description h6 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #de9714;
+}
+
+.staff-description p {
+    font-size: 16px;
+}
+
+.staff1 {
+    background-image: url(img/team/staff/staff-1.jpg);
+}
+
+.staff2 {
+    background-image: url(img/team/staff/staff-2.jpg);
+}
+
+.staff3 {
+    background-image: url(img/team/staff/staff-3.jpg);
+}
+
+.staff4 {
+    background-image: url(img/team/staff/staff-4.jpg);
+}
+
+.down-part img {
+    height: 20px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+/*-------------------------------------------------------------------------- CONTACT */
+/*------------------------------------------------------------ CONTACT HERO --*/
+.contact-hero {
+    height: 500px;
+    width: 100%;
+    background-image: url(img/contact/hero/contact-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.contact-items {
+    margin-top: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-items .order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(222, 151, 20, .5);
+    font-weight: 100;
+    font-size: 12px;
+    margin: auto;
+    transition: all .5s ease-in-out;
+}
+
+.contact-items h4 {
+    font-size: 28px;
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.contact-items h6 {
+    font-size: 17px;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+/*------------------------------------------------------------ MAPS --*/
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+/*------------------------------------------------------------ RESERVE --*/
+.reserve {
+    width: 100%;
+    height: auto;
+}
+
+.reserve-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.reserve-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.reserve-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.reserve-intro {
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.reserve-container {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    margin-top: 25px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    width: 324px;
+    height: 100%;
+    border: 1px solid #474747;
+    margin: 0 15px;
+}
+
+.calendar-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+.calendar-date p {
+    margin: 0 10px;
+}
+
+.calendar-content {
+    width: 90%;
+    margin: auto;
+}
+
+.month {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.month img {
+    height: 15px;
+}
+
+.calendar-table {
+    margin: auto;
+    color: #474747;
+}
+
+.calendar-table table {
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.calendar-table td {
+    text-align: center;
+    width: 37px;
+    height: 37px;
+    /* width: 12.802768166089965vw;
+    height: 11vw; */
+}
+
+.calendar-table .light-gray {
+    color: #b7b7b7;
+}
+
+input {
+    appearance: none;
+    margin: 0;
+}
+
+td:has(> input:checked) {
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+td:has(> input) {
+    cursor: pointer;
+}
+
+.rest-reservation {
+    width: 324px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 15px;
+}
+
+.guests {
+    width: 100%;
+    border: 1px solid #474747;
+    margin-top: 30px;
+}
+
+.guests-content {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.guests-content h6 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.select-guests {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.guest-number-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.guest-number {
+    width: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: 1px solid #474747;
+}
+
+.guests-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.substract-btn {
+    background-color: #b7b7b7;
+    margin-right: 10px;
+}
+
+.add-btn {
+    background-color: black;
+}
+
+.hour {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+}
+
+.hour h6 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.hour-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hour-item {
+    width: 20%;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hour-item::after {
+    content: "";
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    width: 25%;
+    border-bottom: 1px solid #474747;
+}
+
+.hour-item:has(> input:checked) {
+    background-color: black;
+    color: white;
+    transition: all .5s ease;
+}
+
+.reserve-btn-container {
+    width: 100%;
+    margin-top: 45px;
+}
+
+.reserve-btn {
+    width: 150px;
+    height: 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/*------------------------------------------------------------ RESERVE --*/
+
+.contact-us {
+    width: 100%;
+    height: auto;
+}
+
+.contact-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.contact-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.contact-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.contact-intro {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.contact-us-container {
+    width: 90%;
+    padding-bottom: 50px;
+    margin: auto;
+    max-width: 960px;
+}
+
+.contact-us-container input {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    outline: none;
+    border: 1px solid #b6b6b6;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 7px;
+    color: #474747;
+}
+
+.contact-us-container textarea {
+    box-sizing: border-box;
+    padding: 7px;
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #b6b6b6;
+}
+
+.contact-us-container input::placeholder,
+.contact-us-container textarea::placeholder {
+    text-transform: uppercase;
+    font-family: 'Red Hat Display';
+    color: #474747;
+}
+
+.send-message-btn {
+    width: 150px;
+    height: 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    margin-left: auto;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+/*-------------------------------------------------------------------------- MENU */
+.menu-hero {
+    height: 500px;
+    width: 100%;
+    background-image: url(img/menu/hero/menu-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 58% 50%;
+    position: relative;
+}
+
+.menu-hero-items {
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    color: white;
+}
+
+.menu-hero-items .order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid rgba(222, 151, 20, .5);
+    font-weight: 100;
+    font-size: 12px;
+    margin: auto;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-hero-items h4 {
+    font-size: 28px;
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+.menu-hero-items h6 {
+    font-size: 17px;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+/*------------------------------------------------------------ MAIN DISHES --*/
+.main-dishes-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.main-dishes-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.main-dishes-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.main-dishes-intro {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.main-dishes-container {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transition: all .3s ease-in-out;
+}
+
+.main-dish-item {
+    height: 300px;
+    width: 350px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.main-dish-img {
+    height: 70%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.main-dish-description {
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    background-color: #2d2d2d;
+}
+
+.main-dish-description h6 {
+    color: #de9714;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main-dish-description p {
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.main-dish1 {
+    background-image: url(img/menu/main-dishes/dish-1.jpg);
+}
+
+.main-dish2 {
+    background-image: url(img/menu/main-dishes/dish-2.jpg);
+}
+
+.main-dish3 {
+    background-image: url(img/menu/main-dishes/dish-3.jpg);
+}
+
+.main-dish4 {
+    background-image: url(img/menu/main-dishes/dish-4.jpg);
+}
+
+.main-dish5 {
+    background-image: url(img/menu/main-dishes/dish-5.jpg);
+}
+
+.main-dish6 {
+    background-image: url(img/menu/main-dishes/dish-6.jpg);
+}
+
+/*------------------------------------------------------------ TASTING MENUS --*/
+.tasting-menus {
+    width: 100%;
+    height: auto;
+}
+
+.tasting-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.tasting-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.tasting-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.tasting-intro {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.tasting-container {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.tasting-item {
+    margin-bottom: 50px;
+}
+
+.tasting-item h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.tasting-item span {
+    color: #de9714;
+}
+
+.tasting-item img {
+    width: 280px;
+    height: 280px;
+}
+
+.tasting-item h5 {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.tasting-item h6 {
+    margin: 10px 0;
+    color: #de9714;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tasting-item p {
+    color: #474747;
+    font-size: 15px;
+}
+
+/*------------------------------------------------------------ GALLERY --*/
+.gallery {
+    width: 100%;
+    height: auto;
+    background-color: #f7f3ea;
+}
+
+.gallery-title {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.gallery-title::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 15px;
+    border-bottom: 1px solid #de9714;
+}
+
+.gallery-title h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.gallery-intro {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    color: #474747;
+}
+
+.gallery-container {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-container img {
+    width: 32%;
+    margin: 5px;
+    min-width: 340px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* -------------------------------------- WELCOME */
+    .welcome-img {
+        height: 350px;
+    }
+
+    /* -------------------------------------- OWNER */
+    .owner-content {
+        width: 90%;
+        margin-top: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: top;
+    }
+
+    .owner-img {
+        box-sizing: border-box;
+        padding-bottom: 100%;
+        width: 100%;
+        height: 250px;
+    }
+
+    .owner-container {
+        flex: 1 1 300px;
+    }
+
+    .owner-text1 {
+        flex: 1 1 300px;
+    }
+
+    .owner-first-p {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .owner-text2 {
+        flex: 2 2 700px;
+    }
+
+    /* -------------------------------------- CHEF */
+    .chef-content {
+        max-width: 540px;
+    }
+
+    .chef-information {
+        line-height: 25px;
+    }
+
+    .chef-signature {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    /* ---------------------------------------------------------------------------------- HOME */
+    /* --------------------------------------HERO*/
+    .menu-btn {
+        display: none;
+    }
+
+    .navbar {
+        position: static;
+        width: 50%;
+    }
+
+    .logo {
+        font-size: 60px;
+        margin-left: 15px;
+    }
+
+    .menu-items {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        position: static;
+        background: none;
+        height: 100%;
+        width: 100%;
+        transition: none;
+        font-size: 18px;
+    }
+
+    .navbar a {
+        display: initial;
+    }
+
+    .hero-items {
+        margin-top: 100px;
+        right: 50px;
+    }
+
+    .hero-items h4 {
+        font-size: 30px;
+    }
+
+    .hero-items h6 {
+        font-size: 18px;
+    }
+
+    .hero-items .order-btn {
+        width: 200px;
+        height: 60px;
+        font-size: 14px;
+        border: 1px solid #de9714;
+    }
+
+    /* -------------------------------------- WELCOME */
+    .welcome-title .logo {
+        height: 70px;
+        font-size: 48px;
+    }
+
+    .welcome-title h4 {
+        font-size: 36px;
+    }
+
+    .welcome-title p {
+        font-size: 25px;
+    }
+
+    .welcome-intro {
+        width: 55%;
+        font-size: 16px;
+    }
+
+    .welcome-content {
+        margin: 40px 0;
+    }
+
+    .welcome-history {
+        flex-direction: row;
+    }
+
+    .welcome-img {
+        flex: 1;
+    }
+
+    .welcome2 {
+        order: 1;
+    }
+
+    .welcome-text {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .welcome-text p {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    /* -------------------------------------- OUR RESTAURANT */
+    .our-restaurant-title h4 {
+        font-size: 36px;
+    }
+
+    .our-restaurant-intro {
+        width: 60%;
+        font-size: 16px;
+    }
+
+    .our-restaurant-content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .restaurant-img {
+        margin: 10px;
+        width: 45%;
+        max-width: 650px;
+        padding-bottom: 25%;
+        box-sizing: border-box;
+    }
+
+    /* -------------------------------------- DISCOVER MENU */
+    .know-menu {
+        background-position: left center;
+    }
+
+    .know-content {
+        top: 80px;
+        right: 120px;
+    }
+
+    .know-menu-text {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .view-now-btn {
+        width: 180px;
+        height: 55px;
+        font-size: 14px;
+        margin-left: auto;
+    }
+
+    /* -------------------------------------- OWNER */
+    .owner-title h4 {
+        font-size: 36px;
+    }
+
+    .owner-content {
+        width: 90%;
+        margin-top: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: top;
+        justify-content: center;
+    }
+
+    .owner-img {
+        box-sizing: border-box;
+        padding-bottom: 100%;
+        width: 100%;
+        height: 250px;
+    }
+
+    .owner-container {
+        flex: 2;
+        max-width: 372.5px;
+    }
+
+    .owner-container .signature {
+        font-family: WindSong, sans-serif;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .owner-content p {
+        font-size: 16px;
+    }
+
+    .owner-content p:nth-child(1) {
+        flex: 1;
+    }
+
+    .owner-text1 {
+        max-width: 392.5px;
+        padding-left: 20px;
+        padding-top: 50px;
+        box-sizing: border-box;
+    }
+
+    .owner-text2 {
+        max-width: 765px;
+    }
+
+    /* -------------------------------------- TEAM HOME */
+    .team-items {
+        position: absolute;
+        right: auto;
+        left: 40px;
+        bottom: 40px;
+        text-align: left;
+        color: #fff;
+    }
+
+    .team-items .order-btn {
+        margin: 0;
+    }
+
+    /* -------------------------------------- MATTER OF COOKING */
+    .cooking-title h4 {
+        font-size: 36px;
+    }
+
+    .cooking-content p {
+        font-size: 16px;
+    }
+
+    /* -------------------------------------- EVERY DETAIL */
+    .every-detail {
+        background-attachment: fixed;
+    }
+
+    .detail-text {
+        left: auto;
+        right: 180px;
+        font-size: 36px;
+    }
+
+    /* -------------------------------------- CHEF */
+    .chef-title h4 {
+        font-size: 36px;
+    }
+
+    .chef-content {
+        max-width: 1100px;
+        display: flex;
+        align-items: center;
+        margin: 50px auto;
+    }
+
+    .chef-container {
+        flex: 1 1 350px;
+    }
+
+    .chef-information {
+        font-size: 16px;
+        flex: 1 1 350px;
+        box-sizing: border-box;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .chef-signature {
+        font-size: 40px;
+    }
+
+    .chef-information .chef-signature {
+        display: block;
+        text-align: right;
+    }
+
+    .chef-container .chef-signature {
+        display: none;
+    }
+
+    /* -------------------------------------- STAFF */
+    .staff-title h4 {
+        font-size: 36px;
+    }
+
+    .staff-intro {
+        font-size: 16px;
+        line-height: 25px;
+        width: 70%;
+    }
+
+    /* -------------------------------------- MENU HERO */
+    .menu-hero {
+        background-position: center 20%;
+    }
+
+    .menu-hero-items h4 {
+        font-size: 28px;
+        font-weight: 200;
+        margin: 20px 0;
+    }
+
+    .menu-hero-items h6 {
+        font-size: 17px;
+        font-weight: 200;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    /* -------------------------------------- MAIN DISHES */
+    .main-dishes-title h4 {
+        font-size: 36px;
+    }
+
+    .main-dishes-intro {
+        width: 70%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .main-dish-item {
+        margin-bottom: 50px;
+    }
+
+    /* -------------------------------------- TASTING MENUS */
+    .tasting-title h4 {
+        font-size: 36px;
+    }
+
+    .tasting-intro {
+        width: 70%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .tasting-item h4 {
+        font-size: 24px;
+    }
+
+    .tasting-item h5 {
+        margin: 20px 0;
+        font-size: 22px;
+    }
+
+    .tasting-item h6 {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .tasting-item p {
+        color: #474747;
+        font-size: 16px;
+    }
+
+    /* -------------------------------------- GALLERY */
+    .gallery-title h4 {
+        font-size: 36px;
+    }
+
+    .gallery-intro {
+        width: 70%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    /* -------------------------------------- CONTACT HERO */
+    .contact-items .order-btn {
+        width: 170px;
+        height: 50px;
+        font-size: 13px;
+    }
+
+    .contact-items h4 {
+        font-size: 32px;
+    }
+
+    .contact-items h6 {
+        font-size: 20px;
+    }
+
+    /* -------------------------------------- RESERVE */
+    .reserve-title h4 {
+        font-size: 36px;
+    }
+
+    .reserve-intro {
+        width: 70%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    /* -------------------------------------- CONTACT US */
+    .contact-title h4 {
+        font-size: 36px;
+    }
+
+    .contact-intro {
+        width: 70%;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .contact-us-container input, .contact-us-container textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    /* -------------------------------------- MATTER OF COOKING */
+    .cooking-title h4 {
+        font-size: 36px;
+    }
+
+    .cooking-img {
+        flex: 1 1 400px;
+        padding-bottom: 30%;
+        box-sizing: border-box;
+    }
+
+    .cooking-text {
+        display: block;
+        flex: 1 1 400px;
+        box-sizing: border-box;
+        margin: 40px;
+    }
+
+    .cooking-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .cooking-content p {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .footer-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .learn {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        margin-right: 40px;
+    }
+
+    .about-us {
+        margin-right: 20px;
+    }
+
+    .learn-item {
+        font-weight: 200;
+        margin: 18px 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    /* -------------------------------------- OWNER */
+    .owner-text1,
+    .owner-text2 {
+        display: none;
+    }
+
+    .owner-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: top;
+        justify-content: center;
+    }
+
+    .owner-container .signature {
+        font-size: 48px;
+        margin: 40px 0;
+    }
+
+    .owner-img {
+        box-sizing: border-box;
+        padding-bottom: 100%;
+        width: 100%;
+        height: 250px;
+    }
+
+    .owner-container {
+        flex: 1;
+        max-width: 540px;
+    }
+
+    .text-fullwidth {
+        display: block;
+        text-align: justify;
+        margin: 15px 30px;
+        box-sizing: border-box;
+        flex: 1;
+        max-width: 540px;
+        font-size: 20px;
+        color: #474747;
+        line-height: 30px;
+    }
+
+    /* -------------------------------------- CHEF */
+    .chef-title h4 {
+        font-size: 36px;
+    }
+
+    .chef-signature {
+        font-size: 50px;
+        margin: 50px 0;
+    }
+
+    /* -------------------------------------- RESERVE */
+    .reserve-container {
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    .calendar {
+        width: 500px;
+        margin: 0 30px;
+    }
+
+    .rest-reservation {
+        width: 500px;
+        margin: 0 30px;
+    }
+
+    .calendar-date {
+        height: 60px;
+    }
+
+    .calendar-date p {
+        font-size: 18px;
+        padding: 20px 10px;
+    }
+
+    .month img {
+        height: 20px;
+    }
+
+    .current-month {
+        font-size: 18px;
+    }
+
+    .calendar-table td {
+        width: 55px;
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .guests-content h6 {
+        font-size: 18px;
+    }
+
+    .guest-number {
+        font-size: 18px;
+    }
+
+    .guests-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .hour-item {
+        font-size: 18px;
+    }
+
+    .hour h6 {
+        font-size: 18px;
+    }
+
+    .reserve-btn {
+        width: 200px;
+        height: 60px;
+        font-weight: 100;
+        font-size: 14px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+
+    /* ---------------------------------------------------------------------------------- HOME */
+    /* --------------------------------------HERO*/
+    .hero {
+        background-image: url(img/home/hero/hero-2.jpg);
+    }
+
+    .menu-items {
+        font-size: 20px;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    .navbar {
+        width: 50%;
+    }
+
+    .logo {
+        font-size: 70px;
+        margin-left: 30px;
+    }
+
+    .hero-items {
+        margin-top: 40px;
+        right: auto;
+        left: 30px;
+        text-align: left;
+    }
+
+    .hero-items h4 {
+        font-size: 40px;
+    }
+
+    .hero-items h6 {
+        font-size: 24px;
+    }
+
+    .hero-items .order-btn {
+        width: 250px;
+        height: 70px;
+        font-size: 16px;
+        letter-spacing: 3px;
+        margin-left: 0;
+    }
+
+    /* -------------------------------------- WELCOME */
+    .welcome-title {
+        padding-top: 60px;
+    }
+
+    .welcome-title .logo {
+        height: 85px;
+        font-size: 60px;
+    }
+
+    .welcome-title::after {
+        content: "";
+        padding-top: 22px;
+    }
+
+    .welcome-title h4 {
+        font-size: 48px;
+    }
+
+    .welcome-title p {
+        font-size: 32px;
+    }
+
+    .welcome-intro {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .welcome-content {
+        margin: 65px 0;
+    }
+
+    .welcome-history:nth-child(1) {
+        margin-bottom: 100px;
+    }
+
+    .text-full-width {
+        display: block;
+    }
+
+    .welcome-img {
+        flex: 3;
+        height: 600px;
+    }
+
+    .welcome-text {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-text p {
+        width: 90%;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 10px 0;
+    }
+
+    /* -------------------------------------- OUR RESTAURANT */
+    .our-restaurant-title h4 {
+        font-size: 48px;
+    }
+
+    .our-restaurant-content {
+        padding-bottom: 100px;
+    }
+
+    .our-restaurant-intro {
+        width: 50%;
+        font-size: 20px;
+        margin: 50px auto;
+        line-height: 30px;
+    }
+
+    /* -------------------------------------- DISCOVER MENU */
+    .know-menu {
+        height: 350px;
+    }
+
+    .know-menu {
+        background-position: left center;
+    }
+
+    .know-content {
+        top: 80px;
+        right: 550px;
+    }
+
+    .know-menu-text {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .view-now-btn {
+        width: 250px;
+        height: 70px;
+        font-size: 16px;
+        margin-left: auto;
+    }
+
+    /* -------------------------------------- OWNER */
+    .owner-title h4 {
+        font-size: 48px;
+    }
+
+    .owner-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: top;
+        justify-content: center;
+        margin: 90px auto;
+        padding-bottom: 0;
+    }
+
+    /* -------------------------------------- FOOTER */
+    .footer-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-title {
+        font-size: 24px;
+    }
+
+    .learn {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        margin-right: 80px;
+    }
+
+    .instagram-images {
+        margin: 40px 0;
+    }
+
+    .about-us {
+        margin-right: 50px;
+    }
+
+    .learn-item {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    .copy {
+        font-size: 12px;
+        margin-top: 50px;
+    }
+
+    .about-us p {
+        font-size: 18px;
+    }
+
+    /* -------------------------------------- TEAM */
+    .team-items {
+        position: absolute;
+        right: auto;
+        left: 40px;
+        bottom: 40px;
+        text-align: left;
+        color: #fff;
+    }
+
+    .team-items .order-btn {
+        width: 200px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .team-items h4 {
+        font-size: 36px;
+    }
+
+    .team-items h6 {
+        font-size: 22px;
+    }
+
+    /* -------------------------------------- MATTER OF COOKING */
+    .cooking-container {
+        padding-bottom: 100px;
+    }
+
+    .cooking-title {
+        padding: 30px 0;
+    }
+
+    .cooking-title h4 {
+        font-size: 48px;
+        padding-top: 50px;
+    }
+
+    .cooking-text {
+        margin: 40px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* -------------------------------------- EVERY DETAIL */
+    .detail-text {
+        position: absolute;
+        bottom: 55px;
+        left: auto;
+        right: 250px;
+        font-size: 60px;
+    }
+
+    /* -------------------------------------- CHEF */
+    .chef-title {
+        padding-top: 80px;
+    }
+
+    .chef-content {
+        margin: 80px auto;
+    }
+
+    .chef-title h4 {
+        font-size: 48px;
+    }
+
+    .chef-information {
+        font-size: 20px;
+        line-height: 30px;
+        margin-right: 60px;
+    }
+
+    .chef-signature {
+        font-size: 60px;
+        margin: 50px 0;
+    }
+
+    /* -------------------------------------- STAFF */
+    .staff-title h4 {
+        font-size: 48px;
+    }
+
+    .staff-intro {
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 60%;
+        margin-top: 40px;
+    }
+
+    .staff-container {
+        margin: 100px auto;
+    }
+
+    /* -------------------------------------- MENU HERO */
+    .menu-hero {
+        height: 800px;
+    }
+
+    .menu-hero-items {
+        top: 150px;
+        left: 45px;
+    }
+
+    .menu-hero-items h4 {
+        font-size: 48px;
+    }
+
+    .menu-hero-items h6 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .menu-hero-items .order-btn {
+        width: 230px;
+        height: 65px;
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    /* -------------------------------------- MAIN DISHES */
+    .main-dishes-title {
+        padding-top: 60px;
+    }
+
+    .main-dishes-title h4 {
+        font-size: 48px;
+    }
+
+    .main-dishes-intro {
+        width: 55%;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 40px;
+    }
+
+    .main-dishes-container {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .main-dish-item {
+        height: 400px;
+        width: 500px;
+    }
+
+    .main-dish-description h6 {
+        padding: 15px 0;
+        font-size: 20px;
+    }
+
+    .main-dish-description p {
+        font-size: 15px;
+    }
+
+    /* -------------------------------------- TASTING MENUS */
+    .tasting-title h4 {
+        font-size: 48px;
+    }
+
+    .tasting-intro {
+        width: 55%;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 40px;
+    }
+
+    .tasting-item {
+        width: 35%;
+    }
+
+    .tasting-item h4 {
+        font-size: 28px;
+    }
+
+    .tasting-item h5 {
+        margin: 20px 0;
+        font-size: 24px;
+    }
+
+    .tasting-item h6 {
+        margin: 15px 0;
+        font-size: 20px;
+    }
+
+    .tasting-item p {
+        font-size: 18px;
+    }
+
+    /* -------------------------------------- GALLERY */
+    .gallery-title {
+        padding-top: 60px;
+    }
+
+    .gallery-title h4 {
+        font-size: 48px;
+    }
+
+    .gallery-intro {
+        width: 50%;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 40px auto;
+    }
+
+    .gallery-container {
+        padding-top: 20px;
+        padding-bottom: 140px;
+    }
+
+    /* -------------------------------------- CONTACT HERO */
+    .contact-hero {
+        background-position: center 80%;
+    }
+
+    .contact-items {
+        width: fit-content;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .contact-items .order-btn {
+        width: 200px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .contact-items h4 {
+        font-size: 36px;
+    }
+
+    .contact-items h6 {
+        font-size: 22px;
+    }
+
+    /* -------------------------------------- RESERVE */
+    .reserve-title {
+        padding-top: 60px;
+    }
+
+    .reserve-title h4 {
+        font-size: 48px;
+    }
+
+    .reserve-intro {
+        width: 50%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* -------------------------------------- CONTACT US */
+    .contact-us-container {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    .contact-title h4 {
+        font-size: 48px;
+    }
+
+    .contact-intro {
+        width: 50%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .contact-us-container input, .contact-us-container textarea {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .send-message-btn {
+        width: 200px;
+        height: 60px;
+        font-size: 14px;
+    }
+}
